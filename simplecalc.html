@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+    <title>simple calculator</title>
+    
+</head>
+<body>
+    <h1 align="center">calculator</h1>
+    <div>
+    first number:<input type="text" id="firstnumber"/><br/>
+    second number:<input type="text" id="secondnumber"/><br/>
+   
+    <button onclick="addtwonumbers()" id="btnadd">add</button>
+    <button onclick="subtracttwonumbers()" id="btnminus">subtract</button>
+    <button onclick="multiplication()" id="btnmultiply">multiplication</button>
+    <button onclick="division()" id="btndiv">division</button><br/>
+    <label id="result">result</label>
+   
+    </div>
+    
+    <script>
+         function addtwonumbers(){
+        var n1El=document.getElementById('firstnumber');
+        var n2El=document.getElementById('secondnumber');
+        var n1=parseFloat(n1El.value);
+        var n2=parseFloat(n2El.value);
+       
+            var sum=n1+n2;
+            document.getElementById('result').innerText="sum is="+sum;
+            console.log(sum);
+        }
+        function subtracttwonumbers(){
+            var n1El=document.getElementById('firstnumber');
+        var n2El=document.getElementById('secondnumber');
+        var n1=parseFloat(n1El.value);
+        var n2=parseFloat(n2El.value);
+        var subtract=n1-n2;
+        document.getElementById('result').innerHTML=subtract;
+        console.log(subtract);
+
+        }
+        function multiplication(){
+            var n1El=document.getElementById('firstnumber');
+        var n2El=document.getElementById('secondnumber');
+        var n1=parseFloat(n1El.value);
+        var n2=parseFloat(n2El.value);
+        var multiplication=n1*n2;
+        document.getElementById('result').innerHTML="result is="+multiplication;
+        console.log(multiplication);
+        }
+        function division(){
+            var n1El=document.getElementById('firstnumber');
+        var n2El=document.getElementById('secondnumber');
+        var n1=parseFloat(n1El.value);
+        var n2=parseFloat(n2El.value);
+        var division=n1/n2;
+        document.getElementById('result').innerHTML="result is="+division;
+        console.log(division);
+
+        }
+    </script>
+    
+</body>
+
+</html>
